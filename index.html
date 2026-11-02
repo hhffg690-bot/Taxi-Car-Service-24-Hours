@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1830">
+  <meta name="description" content="Taxi Car Service 24 Hours บริการรถเหมาพร้อมคนขับ รับส่งสนามบิน เดินทางทั่วประเทศไทย ติดต่อโดยตรง ไม่มีนายหน้า">
+  <title>Taxi Car Service 24 Hours | Premium Chauffeur Service</title>
+  <style>
+    :root{--navy:#0b1830;--navy2:#13294b;--gold:#d8b66a;--cream:#f7f5ef;--ink:#1c2635;--muted:#687386;--white:#fff;--line:#e8e4da}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,"Noto Sans Thai",Tahoma,sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}
+    .container{width:min(1140px,calc(100% - 40px));margin:auto}
+    .topbar{background:#071225;color:#d7dce5;font-size:13px;padding:8px 0}.topbar .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    header{position:sticky;top:0;z-index:20;background:rgba(11,24,48,.97);backdrop-filter:blur(10px);color:white;border-bottom:1px solid rgba(216,182,106,.22)}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px}.brand-mark{width:42px;height:42px;border:1px solid var(--gold);border-radius:12px;display:grid;place-items:center;color:var(--gold);font-size:23px}
+    .brand small{display:block;color:#c6cbd4;font-size:10px;letter-spacing:2px;font-weight:500}
+    .navlinks{display:flex;align-items:center;gap:25px;font-size:14px;color:#e8eaf0}.navlinks a:hover{color:var(--gold)}
+    .nav-actions{display:flex;align-items:center;gap:10px}.lang-btn,.menu-btn{background:transparent;color:white;border:1px solid #526078;border-radius:30px;padding:8px 13px;cursor:pointer}.menu-btn{display:none}
+    .hero{background:linear-gradient(90deg,rgba(5,15,31,.92),rgba(5,15,31,.54)),url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=85') center/cover;min-height:620px;display:flex;align-items:center;color:white}
+    .hero-content{max-width:720px;padding:90px 0}.eyebrow{color:var(--gold);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:12px}
+    h1{font-size:clamp(38px,6vw,66px);line-height:1.13;margin:18px 0}.hero p{font-size:18px;color:#e2e6ed;max-width:650px}
+    .gold{color:var(--gold)}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 22px;border-radius:8px;font-weight:700;border:1px solid transparent;cursor:pointer;transition:.2s}
+    .btn-gold{background:var(--gold);color:#101c30}.btn-gold:hover{background:#e7ca83;transform:translateY(-2px)}.btn-outline{border-color:#d5d9e1;color:white}.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+    .trustbar{background:var(--navy2);color:white}.trustgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;padding:23px 0}.trustitem{display:flex;gap:12px;align-items:center}.trustitem b{display:block;color:var(--gold);font-size:14px}.trustitem span{font-size:12px;color:#d5dbe5}
+    section{padding:82px 0}.section-head{text-align:center;max-width:720px;margin:0 auto 38px}.section-head .eyebrow{color:#a27c2d}.section-head h2{font-size:clamp(28px,4vw,40px);color:var(--navy);margin:8px 0 10px;line-height:1.25}.section-head p{color:var(--muted);margin:0}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.about-photo{min-height:400px;border-radius:18px;background:url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1100&q=85') center/cover;box-shadow:18px 18px 0 #e8ddc4}
+    .about-copy h2{font-size:34px;color:var(--navy);line-height:1.25}.about-copy p{color:var(--muted)}.ticks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0}.tick{font-weight:700;font-size:14px}.tick:before{content:'✓';color:#a27c2d;margin-right:9px}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.card{background:white;border:1px solid var(--line);border-radius:15px;overflow:hidden;box-shadow:0 10px 30px rgba(13,28,52,.05);transition:.25s}.card:hover{transform:translateY(-5px);box-shadow:0 16px 35px rgba(13,28,52,.11)}
+    .car-image{height:190px;background-size:cover;background-position:center}.card-body{padding:20px}.card h3{color:var(--navy);font-size:18px;margin:0 0 7px}.card p{font-size:14px;color:var(--muted);margin:0}
+    .services{background:#fff}.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.service{padding:25px;border:1px solid var(--line);border-radius:14px;background:#fff}.service .icon{font-size:27px}.service h3{color:var(--navy);font-size:17px;margin:10px 0 5px}.service p{color:var(--muted);font-size:14px;margin:0}
+    .booking{background:linear-gradient(135deg,#0b1830,#17345c);color:white}.booking .section-head h2{color:white}.booking .section-head p{color:#c7d0df}.booking-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}
+    .booking-info h3{font-size:25px;color:var(--gold)}.booking-info p{color:#d2d9e4}.contact-line{padding:15px 0;border-bottom:1px solid #344663}.contact-line b{display:block;color:var(--gold)}
+    form{background:white;color:var(--ink);padding:30px;border-radius:16px;display:grid;grid-template-columns:1fr 1fr;gap:15px}
+    .field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:13px;font-weight:700;color:#344056}.field input,.field select,.field textarea{width:100%;border:1px solid #d9dee7;border-radius:8px;padding:12px;background:#fff;color:#202a3a;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:#b28b3e;box-shadow:0 0 0 3px #d8b66a30}.field textarea{min-height:100px;resize:vertical}.form-note{grid-column:1/-1;font-size:12px;color:#687386;margin:0}
+    .form-submit{grid-column:1/-1;background:var(--gold);color:#101c30;border:0;padding:15px;border-radius:8px;font-weight:800;cursor:pointer}.form-submit:hover{background:#e7ca83}
+    .faq{display:grid;grid-template-columns:1fr 1fr;gap:18px}.faq article{background:white;border:1px solid var(--line);border-radius:12px;padding:22px}.faq h3{font-size:17px;color:var(--navy);margin:0 0 7px}.faq p{color:var(--muted);font-size:14px;margin:0}
+    footer{background:#071225;color:#d2d9e4;padding:40px 0 20px}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}.footer-title{color:var(--gold);font-weight:800;margin-bottom:10px}.footer-links{display:grid;gap:8px;font-size:14px}.copyright{border-top:1px solid #26354d;margin-top:30px;padding-top:18px;font-size:12px;text-align:center;color:#8f9aad}
+    .float-actions{position:fixed;right:18px;bottom:18px;z-index:30;display:grid;gap:9px}.float-actions a{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;color:white;font-size:22px;box-shadow:0 6px 18px #0003}.float-call{background:#b58e42}.float-line{background:#06c755}
+    @media(max-width:900px){.cards,.service-grid{grid-template-columns:repeat(2,1fr)}.trustgrid{grid-template-columns:repeat(2,1fr)}.navlinks{display:none;position:absolute;top:78px;left:0;right:0;background:var(--navy);padding:20px;flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.menu-btn{display:block}.about-grid,.booking-wrap{grid-template-columns:1fr}.about-photo{min-height:300px}.footer-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:600px){.container{width:min(100% - 28px,1140px)}.topbar .container{justify-content:center}.nav{height:68px}.navlinks{top:68px}.brand{font-size:14px}.brand small{font-size:8px}.hero{min-height:570px}.hero-content{padding:65px 0}.hero p{font-size:16px}.trustgrid{gap:18px}.trustitem{align-items:flex-start}.trustitem span{font-size:11px}section{padding:60px 0}.cards,.service-grid,.faq{grid-template-columns:1fr}.car-image{height:220px}.ticks{grid-template-columns:1fr}form{grid-template-columns:1fr;padding:20px}.field.full,.form-note,.form-submit{grid-column:1}.footer-grid{grid-template-columns:1fr}.about-copy h2{font-size:29px}}
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="container"><span data-th="ให้บริการทั่วประเทศไทย • ติดต่อโดยตรง ไม่มีนายหน้า" data-en="Nationwide service • Direct contact, no middlemen">ให้บริการทั่วประเทศไทย • ติดต่อโดยตรง ไม่มีนายหน้า</span><span>24 HOURS&nbsp; | &nbsp;064-328-7389</span></div></div>
+  <header><div class="container nav">
+    <a class="brand" href="#home"><span class="brand-mark">✦</span><span>TAXI CAR SERVICE<small>PREMIUM CHAUFFEUR 24 HOURS</small></span></a>
+    <nav class="navlinks" id="navlinks">
+      <a href="#home" data-th="หน้าแรก" data-en="Home">หน้าแรก</a><a href="#about" data-th="เกี่ยวกับเรา" data-en="About">เกี่ยวกับเรา</a><a href="#fleet" data-th="รูปรถ" data-en="Our Fleet">รูปรถ</a><a href="#services" data-th="บริการ" data-en="Services">บริการ</a><a href="#booking" data-th="จองรถ" data-en="Booking">จองรถ</a>
+    </nav>
+    <div class="nav-actions"><button class="lang-btn" id="langToggle" type="button">EN</button><button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu">☰</button></div>
+  </div></header>
+
+  <main>
+    <section class="hero" id="home"><div class="container"><div class="hero-content">
+      <div class="eyebrow" data-th="บริการรถพร้อมคนขับระดับพรีเมียม" data-en="Premium Chauffeur-Driven Service">บริการรถพร้อมคนขับระดับพรีเมียม</div>
+      <h1 data-th="เดินทางอย่างมั่นใจ<br><span class='gold'>สะดวกสบายทุกเส้นทาง</span>" data-en="Travel with confidence<br><span class='gold'>Comfort on every journey</span>">เดินทางอย่างมั่นใจ<br><span class="gold">สะดวกสบายทุกเส้นทาง</span></h1>
+      <p data-th="บริการรถเหมาพร้อมคนขับ 24 ชั่วโมง รับส่งสนามบิน เดินทางไป-กลับต่างจังหวัด และบริการเดินทางทั่วประเทศไทย ติดต่อกับเราโดยตรง ไม่มีนายหน้า" data-en="24-hour private car service with professional drivers. Airport transfers, inter-province trips and nationwide journeys. Book directly with us — no middlemen.">บริการรถเหมาพร้อมคนขับ 24 ชั่วโมง รับส่งสนามบิน เดินทางไป-กลับต่างจังหวัด และบริการเดินทางทั่วประเทศไทย ติดต่อกับเราโดยตรง ไม่มีนายหน้า</p>
+      <div class="actions"><a class="btn btn-gold" href="#booking" data-th="จองรถเลย →" data-en="Book a Ride →">จองรถเลย →</a><a class="btn btn-outline" href="tel:0643287389" data-th="โทร 064-328-7389" data-en="Call 064-328-7389">โทร 064-328-7389</a></div>
+    </div></div></section>
+
+    <div class="trustbar"><div class="container trustgrid">
+      <div class="trustitem"><span>✦</span><div><b data-th="บริการ 24 ชั่วโมง" data-en="24-Hour Service">บริการ 24 ชั่วโมง</b><span data-th="พร้อมดูแลทุกการเดินทาง" data-en="Here when you need us">พร้อมดูแลทุกการเดินทาง</span></div></div>
+      <div class="trustitem"><span>◎</span><div><b data-th="คนขับมืออาชีพ" data-en="Professional Drivers">คนขับมืออาชีพ</b><span data-th="สุภาพและมีประสบการณ์" data-en="Experienced and courteous">สุภาพและมีประสบการณ์</span></div></div>
+      <div class="trustitem"><span>◇</span><div><b data-th="รถหลากหลายประเภท" data-en="A Range of Vehicles">รถหลากหลายประเภท</b><span data-th="เลือกได้ตามความต้องการ" data-en="Options for your needs">เลือกได้ตามความต้องการ</span></div></div>
+      <div class="trustitem"><span>✓</span><div><b data-th="ติดต่อโดยตรง" data-en="Book Direct">ติดต่อโดยตรง</b><span data-th="ไม่มีนายหน้า" data-en="No middlemen">ไม่มีนายหน้า</span></div></div>
+    </div></div>
+
+    <section id="about"><div class="container about-grid"><div class="about-photo" role="img" aria-label="Premium vehicle"></div><div class="about-copy">
+      <div class="eyebrow" data-th="เดินทางระดับพรีเมียม" data-en="The Premium Difference">เดินทางระดับพรีเมียม</div>
+      <h2 data-th="บริการที่ใส่ใจ<br>ในทุกรายละเอียด" data-en="Thoughtful service<br>in every detail">บริการที่ใส่ใจ<br>ในทุกรายละเอียด</h2>
+      <p data-th="เรามุ่งมั่นให้ทุกการเดินทางเป็นเรื่องง่าย สะดวก และอุ่นใจ ด้วยรถยนต์ที่สะอาด พร้อมใช้งาน และคนขับมืออาชีพ ไม่ว่าจะเดินทางเพื่อธุรกิจ พักผ่อน หรือรับส่งสนามบิน เราพร้อมดูแลคุณตลอดเส้นทาง" data-en="We make every journey easy, comfortable and reassuring with clean, well-maintained vehicles and professional drivers. Whether for business, leisure or airport transfers, we are ready to take care of your trip.">เรามุ่งมั่นให้ทุกการเดินทางเป็นเรื่องง่าย สะดวก และอุ่นใจ ด้วยรถยนต์ที่สะอาด พร้อมใช้งาน และคนขับมืออาชีพ ไม่ว่าจะเดินทางเพื่อธุรกิจ พักผ่อน หรือรับส่งสนามบิน เราพร้อมดูแลคุณตลอดเส้นทาง</p>
+      <div class="ticks"><div class="tick" data-th="รถสะอาดพร้อมใช้งาน" data-en="Clean, ready vehicles">รถสะอาดพร้อมใช้งาน</div><div class="tick" data-th="ตรงต่อเวลา" data-en="Punctual service">ตรงต่อเวลา</div><div class="tick" data-th="คนขับสุภาพ" data-en="Courteous drivers">คนขับสุภาพ</div><div class="tick" data-th="เดินทางทั่วประเทศ" data-en="Nationwide coverage">เดินทางทั่วประเทศ</div></div>
+      <a href="#booking" class="btn btn-gold" data-th="สอบถามบริการ" data-en="Enquire Now">สอบถามบริการ</a>
+    </div></div></section>
+
+    <section id="fleet" style="background:#f0eee8"><div class="container"><div class="section-head"><div class="eyebrow" data-th="ยานพาหนะของเรา" data-en="Our Fleet">ยานพาหนะของเรา</div><h2 data-th="เลือกรถที่ใช่สำหรับการเดินทาง" data-en="Choose the right ride for your journey">เลือกรถที่ใช่สำหรับการเดินทาง</h2><p data-th="รถหลากหลายประเภท รองรับทั้งการเดินทางส่วนตัว ครอบครัว และธุรกิจ" data-en="A selection of vehicles for private, family and business travel.">รถหลากหลายประเภท รองรับทั้งการเดินทางส่วนตัว ครอบครัว และธุรกิจ</p></div>
+      <div class="cards">
+        <article class="card"><div class="car-image" style="background-image:url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=900&q=80')"></div><div class="card-body"><h3 data-th="รถเก๋งซีดาน 5 ที่นั่ง" data-en="5-Seater Sedan">รถเก๋งซีดาน 5 ที่นั่ง</h3><p data-th="คล่องตัว สะดวกสบาย เหมาะกับรับส่งสนามบินและเดินทางส่วนตัว" data-en="Agile and comfortable, ideal for airport transfers and private trips.">คล่องตัว สะดวกสบาย เหมาะกับรับส่งสนามบินและเดินทางส่วนตัว</p></div></article>
+        <article class="card"><div class="car-image" style="background-image:url('https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=900&q=80')"></div><div class="card-body"><h3 data-th="SUV 7 ที่นั่ง" data-en="7-Seater SUV">SUV 7 ที่นั่ง</h3><p data-th="กว้างขวาง เหมาะสำหรับครอบครัวและกลุ่มเพื่อนเดินทางต่างจังหวัด" data-en="Spacious choice for families and groups travelling between provinces.">กว้างขวาง เหมาะสำหรับครอบครัวและกลุ่มเพื่อนเดินทางต่างจังหวัด</p></div></article>
+        <article class="card"><div class="car-image" style="background-image:url('https://images.unsplash.com/photo-1566933293069-b55c7f326dd4?auto=format&fit=crop&w=900&q=80')"></div><div class="card-body"><h3 data-th="รถตู้ VIP" data-en="VIP Van">รถตู้ VIP</h3><p data-th="สะดวกสบาย เหมาะสำหรับกลุ่มใหญ่และการเดินทางเป็นหมู่คณะ" data-en="Comfortable and suitable for larger groups and shared journeys.">สะดวกสบาย เหมาะสำหรับกลุ่มใหญ่และการเดินทางเป็นหมู่คณะ</p></div></article>
+        <article class="card"><div class="car-image" style="background-image:url('images/camry.jpg')"></div><div class="card-body"><h3 data-th="Toyota Camry ผู้บริหาร" data-en="Executive Toyota Camry">Toyota Camry ผู้บริหาร</h3><p data-th="สง่างามระดับพรีเมียม เหมาะสำหรับผู้บริหารและการเดินทางสำคัญ" data-en="Elegant premium travel for executives and special occasions.">สง่างามระดับพรีเมียม เหมาะสำหรับผู้บริหารและการเดินทางสำคัญ</p></div></article>
+      </div>
+    </div></section>
+
+    <section class="services" id="services"><div class="container"><div class="section-head"><div class="eyebrow" data-th="บริการของเรา" data-en="What We Do">บริการของเรา</div><h2 data-th="พร้อมดูแลทุกจุดหมาย" data-en="Wherever you need to go">พร้อมดูแลทุกจุดหมาย</h2><p data-th="บริการเดินทางที่ยืดหยุ่น ตอบโจทย์ทั้งงานและการพักผ่อน" data-en="Flexible travel solutions for business and leisure.">บริการเดินทางที่ยืดหยุ่น ตอบโจทย์ทั้งงานและการพักผ่อน</p></div>
+      <div class="service-grid">
+        <article class="service"><div class="icon">✈️</div><h3 data-th="รับส่งสนามบิน" data-en="Airport Transfers">รับส่งสนามบิน</h3><p data-th="รับ-ส่งสนามบินทั่วประเทศ สะดวกและตรงเวลา" data-en="Convenient, punctual airport transfers nationwide.">รับ-ส่งสนามบินทั่วประเทศ สะดวกและตรงเวลา</p></article>
+        <article class="service"><div class="icon">🗺️</div><h3 data-th="เดินทางต่างจังหวัด" data-en="Inter-Province Trips">เดินทางต่างจังหวัด</h3><p data-th="รับจองเดินทางไป-กลับทั่วประเทศไทย" data-en="Book round trips and journeys across Thailand.">รับจองเดินทางไป-กลับทั่วประเทศไทย</p></article>
+        <article class="service"><div class="icon">⚡</div><h3 data-th="เรียกรถเร่งด่วน" data-en="Urgent Booking">เรียกรถเร่งด่วน</h3><p data-th="สอบถามรถพร้อมออกเดินทางได้ โดยขึ้นอยู่กับพื้นที่และรถว่าง" data-en="Ask about prompt dispatch, subject to location and vehicle availability.">สอบถามรถพร้อมออกเดินทางได้ โดยขึ้นอยู่กับพื้นที่และรถว่าง</p></article>
+        <article class="service"><div class="icon">🤝</div><h3 data-th="ติดต่อโดยตรง" data-en="Direct Booking">ติดต่อโดยตรง</h3><p data-th="พูดคุยกับทีมงานโดยตรง ไม่มีนายหน้า" data-en="Speak directly with our team — no middlemen.">พูดคุยกับทีมงานโดยตรง ไม่มีนายหน้า</p></article>
+      </div>
+    </div></section>
+
+    <section class="booking" id="booking"><div class="container"><div class="section-head"><div class="eyebrow" data-th="เริ่มต้นการเดินทาง" data-en="Start Your Journey">เริ่มต้นการเดินทาง</div><h2 data-th="ส่งคำขอจองรถ" data-en="Request a Booking">ส่งคำขอจองรถ</h2><p data-th="กรอกรายละเอียดเบื้องต้น ทีมงานจะติดต่อกลับเพื่อยืนยันการเดินทางและราคา" data-en="Share your trip details. Our team will contact you to confirm availability and pricing.">กรอกรายละเอียดเบื้องต้น ทีมงานจะติดต่อกลับเพื่อยืนยันการเดินทางและราคา</p></div>
+      <div class="booking-wrap"><div class="booking-info"><h3 data-th="ให้ทุกการเดินทางเป็นเรื่องง่าย" data-en="Make every trip effortless">ให้ทุกการเดินทางเป็นเรื่องง่าย</h3><p data-th="แจ้งข้อมูลการเดินทางที่ต้องการ แล้วส่งคำขอผ่าน LINE เพื่อพูดคุยกับทีมงานโดยตรง การจองจะสมบูรณ์เมื่อได้รับการยืนยันจากทีมงาน" data-en="Tell us about your trip and send your request via LINE to speak with our team. Your booking is confirmed only after our team replies.">แจ้งข้อมูลการเดินทางที่ต้องการ แล้วส่งคำขอผ่าน LINE เพื่อพูดคุยกับทีมงานโดยตรง การจองจะสมบูรณ์เมื่อได้รับการยืนยันจากทีมงาน</p>
+        <div class="contact-line"><b data-th="โทรศัพท์" data-en="Telephone">โทรศัพท์</b><a href="tel:0643287389">064-328-7389</a></div>
+        <div class="contact-line"><b>LINE</b><span data-th="กดปุ่มส่งคำขอ ระบบจะเปิด LINE ให้คุณ" data-en="Submit your request to open LINE with your details.">กดปุ่มส่งคำขอ ระบบจะเปิด LINE ให้คุณ</span></div>
+        <div class="contact-line"><b data-th="ให้บริการ" data-en="Service Area">ให้บริการ</b><span data-th="ทั่วประเทศไทย • 24 ชั่วโมง" data-en="Nationwide • 24 hours">ทั่วประเทศไทย • 24 ชั่วโมง</span></div>
+      </div>
+      <form id="bookingForm">
+        <div class="field"><label for="name" data-th="ชื่อผู้ติดต่อ *" data-en="Your Name *">ชื่อผู้ติดต่อ *</label><input id="name" name="name" required autocomplete="name" placeholder="ชื่อ-นามสกุล"></div>
+        <div class="field"><label for="phone" data-th="เบอร์โทรศัพท์ *" data-en="Phone Number *">เบอร์โทรศัพท์ *</label><input id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="08X-XXX-XXXX"></div>
+        <div class="field"><label for="car" data-th="ประเภทรถที่ต้องการ *" data-en="Vehicle Type *">ประเภทรถที่ต้องการ *</label><select id="car" name="car" required><option value="" data-th="เลือกประเภทรถ" data-en="Select a vehicle">เลือกประเภทรถ</option><option>รถเก๋งซีดาน 5 ที่นั่ง / 5-Seater Sedan</option><option>SUV 7 ที่นั่ง / 7-Seater SUV</option><option>รถตู้ VIP / VIP Van</option><option>Toyota Camry ผู้บริหาร / Executive Camry</option></select></div>
+        <div class="field"><label for="date" data-th="วันที่เดินทาง" data-en="Travel Date">วันที่เดินทาง</label><input id="date" name="date" type="date"></div>
+        <div class="field full"><label for="route" data-th="จุดรับ-ส่ง / เวลา / จำนวนผู้โดยสาร *" data-en="Pickup, Drop-off, Time & Passengers *">จุดรับ-ส่ง / เวลา / จำนวนผู้โดยสาร *</label><textarea id="route" name="route" required placeholder="เช่น รับที่... ส่งที่... เวลา... ผู้โดยสาร..."></textarea></div>
+        <p class="form-note" data-th="เมื่อกดส่ง ระบบจะเปิด LINE พร้อมข้อความคำขอจองรถ กรุณากดส่งข้อความใน LINE อีกครั้งเพื่อส่งถึงทีมงาน" data-en="Submit to open LINE with your booking details. Please press Send in LINE to deliver your request.">เมื่อกดส่ง ระบบจะเปิด LINE พร้อมข้อความคำขอจองรถ กรุณากดส่งข้อความใน LINE อีกครั้งเพื่อส่งถึงทีมงาน</p>
+        <button class="form-submit" type="submit" data-th="ส่งคำขอผ่าน LINE →" data-en="Send Request via LINE →">ส่งคำขอผ่าน LINE →</button>
+      </form></div>
+    </div></section>
+
+    <section><div class="container"><div class="section-head"><div class="eyebrow" data-th="คำถามที่พบบ่อย" data-en="Frequently Asked Questions">คำถามที่พบบ่อย</div><h2 data-th="ข้อมูลก่อนออกเดินทาง" data-en="Before You Travel">ข้อมูลก่อนออกเดินทาง</h2></div><div class="faq">
+      <article><h3 data-th="สามารถเดินทางไปต่างจังหวัดได้หรือไม่?" data-en="Do you travel to other provinces?">สามารถเดินทางไปต่างจังหวัดได้หรือไม่?</h3><p data-th="ได้ค่ะ สามารถสอบถามบริการเดินทางไป-กลับต่างจังหวัดทั่วประเทศไทย โดยแจ้งจุดหมายและวันเดินทางให้ทีมงานประเมิน" data-en="Yes. Ask about inter-province trips throughout Thailand. Share your destination and travel date for a quote.">ได้ค่ะ สามารถสอบถามบริการเดินทางไป-กลับต่างจังหวัดทั่วประเทศไทย โดยแจ้งจุดหมายและวันเดินทางให้ทีมงานประเมิน</p></article>
+      <article><h3 data-th="จองรถแล้วถือว่ายืนยันเลยหรือไม่?" data-en="Is my booking confirmed immediately?">จองรถแล้วถือว่ายืนยันเลยหรือไม่?</h3><p data-th="ยังไม่ยืนยันจนกว่าทีมงานจะตรวจสอบรถว่าง ราคา และตอบกลับยืนยันการจอง" data-en="Not yet. Your booking is confirmed only after our team checks availability, price and replies with confirmation.">ยังไม่ยืนยันจนกว่าทีมงานจะตรวจสอบรถว่าง ราคา และตอบกลับยืนยันการจอง</p></article>
+    </div></div></section>
+  </main>
+
+  <footer><div class="container"><div class="footer-grid">
+    <div><div class="brand"><span class="brand-mark">✦</span><span>TAXI CAR SERVICE<small>PREMIUM CHAUFFEUR 24 HOURS</small></span></div><p data-th="บริการรถเหมาพร้อมคนขับทั่วประเทศไทย ติดต่อโดยตรง ไม่มีนายหน้า" data-en="Private chauffeur-driven car service throughout Thailand. Direct booking, no middlemen.">บริการรถเหมาพร้อมคนขับทั่วประเทศไทย ติดต่อโดยตรง ไม่มีนายหน้า</p></div>
+    <div><div class="footer-title" data-th="เมนู" data-en="Explore">เมนู</div><div class="footer-links"><a href="#about" data-th="เกี่ยวกับเรา" data-en="About">เกี่ยวกับเรา</a><a href="#fleet" data-th="รูปรถ" data-en="Our Fleet">รูปรถ</a><a href="#services" data-th="บริการ" data-en="Services">บริการ</a></div></div>
+    <div><div class="footer-title" data-th="ติดต่อเรา" data-en="Contact">ติดต่อเรา</div><div class="footer-links"><a href="tel:0643287389">064-328-7389</a><span>LINE: กรุณาตั้งค่า LINE ID</span><span>บริการ 24 ชั่วโมง</span></div></div>
+  </div><div class="copyright">© <span id="year"></span> Taxi Car Service 24 Hours. All rights reserved.</div></div></footer>
+  <div class="float-actions"><a class="float-call" href="tel:0643287389" aria-label="Call">☎</a><a class="float-line" id="floatLine" href="#" aria-label="LINE">L</a></div>
+
+<script>
+  // ตั้งค่า LINE ID ของธุรกิจในบรรทัดด้านล่างก่อนเผยแพร่เว็บไซต์
+  const LINE_ID = 'fernzajk'; // LINE ID ของธุรกิจ
+  const lineUrl = 'https://line.me/ti/p/~' + encodeURIComponent(LINE_ID);
+  document.getElementById('floatLine').href = lineUrl;
+  document.getElementById('floatLine').target = '_blank';
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const form = document.getElementById('bookingForm');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!form.reportValidity()) return;
+    const data = new FormData(form);
+    const lang = document.documentElement.lang;
+    const message = [
+      lang === 'th' ? 'คำขอจองรถ Taxi Car Service 24 Hours' : 'Taxi Car Service 24 Hours - Booking Request',
+      (lang === 'th' ? 'ชื่อ: ' : 'Name: ') + data.get('name'),
+      (lang === 'th' ? 'โทร: ' : 'Phone: ') + data.get('phone'),
+      (lang === 'th' ? 'ประเภทรถ: ' : 'Vehicle: ') + data.get('car'),
+      (lang === 'th' ? 'วันที่: ' : 'Date: ') + (data.get('date') || '-'),
+      (lang === 'th' ? 'รายละเอียด: ' : 'Trip details: ') + data.get('route')
+    ].join('\n');
+    const encoded = encodeURIComponent(message);
+    if(!LINE_ID || LINE_ID === 'YOUR_LINE_ID'){
+      alert(lang === 'th' ? 'กรุณาตั้งค่า LINE_ID ในไฟล์ index.html ก่อนใช้งานระบบจอง หรือโทร 064-328-7389' : 'Please configure LINE_ID in index.html before using booking, or call 064-328-7389.');
+      window.open('https://line.me/', '_blank');
+      return;
+    }
+    window.open('https://line.me/R/msg/text/?' + encoded, '_blank');
+  });
+
+  const toggle = document.getElementById('langToggle');
+  toggle.addEventListener('click',()=>{
+    const next = document.documentElement.lang === 'th' ? 'en' : 'th';
+    document.documentElement.lang = next;
+    document.querySelectorAll('[data-th][data-en]').forEach(el=>{
+      el.innerHTML = el.getAttribute('data-' + next);
+    });
+    toggle.textContent = next === 'th' ? 'EN' : 'TH';
+  });
+  document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('navlinks').classList.toggle('open'));
+  document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));
+</script>
+</body>
+</html>

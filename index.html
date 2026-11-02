@@ -147,7 +147,7 @@
       (lang === 'th' ? 'รายละเอียด: ' : 'Trip details: ') + data.get('route')
     ].join('\n');
     const encoded = encodeURIComponent(message);
-    if(!LINE_ID || LINE_ID === 'YOUR_LINE_ID'){
+    if(!LINE_ID || LINE_ID === 'https://line.me/ti/p/Ck4RRMf6KD'){
       alert(lang === 'th' ? 'กรุณาตั้งค่า LINE_ID ในไฟล์ index.html ก่อนใช้งานระบบจอง หรือโทร 064-328-7389' : 'Please configure LINE_ID in index.html before using booking, or call 064-328-7389.');
       window.open('https://line.me/', '_blank');
       return;

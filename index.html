@@ -120,39 +120,53 @@
   <footer><div class="container"><div class="footer-grid">
     <div><div class="brand"><span class="brand-mark">✦</span><span>TAXI CAR SERVICE<small>PREMIUM CHAUFFEUR 24 HOURS</small></span></div><p data-th="บริการรถเหมาพร้อมคนขับทั่วประเทศไทย ติดต่อโดยตรง ไม่มีนายหน้า" data-en="Private chauffeur-driven car service throughout Thailand. Direct booking, no middlemen.">บริการรถเหมาพร้อมคนขับทั่วประเทศไทย ติดต่อโดยตรง ไม่มีนายหน้า</p></div>
     <div><div class="footer-title" data-th="เมนู" data-en="Explore">เมนู</div><div class="footer-links"><a href="#about" data-th="เกี่ยวกับเรา" data-en="About">เกี่ยวกับเรา</a><a href="#fleet" data-th="รูปรถ" data-en="Our Fleet">รูปรถ</a><a href="#services" data-th="บริการ" data-en="Services">บริการ</a></div></div>
-    <div><div class="footer-title" data-th="ติต่อเรา" data-en="Contact">ติดต่อเรา</div><div class="footer-links"><a href="tel:0643287389">064-328-7389</a><span>LINE: นิว </span><span>บริการ 24 ชั่วโมง</span></div></div>
+    <div><div class="footer-title" data-th="ติต่อเรา" data-en="Contact">ติดต่อเรา</div><div class="footer-links"><a href="tel:0643287389">064-328-7389</a><span>LINE: คุณนิว</span><span>บริการ 24 ชั่วโมง</span></div></div>
   </div><div class="copyright">© <span id="year"></span> Taxi Car Service 24 Hours. All rights reserved.</div></div></footer>
   <div class="float-actions"><a class="float-call" href="tel:0643287389" aria-label="Call">☎</a><a class="float-line" id="floatLine" href="#" aria-label="LINE">L</a></div>
 
 <script>
-  // ตั้งค่า LINE ID ของธุรกิจในบรรทัดด้านล่างก่อนเผยแพร่เว็บไซต์
-  const LINE_ID = 'fernzajk'; // LINE ID ของธุรกิจ
+  // LINE ID ของคุณนิว ใช้สำหรับปุ่ม LINE บนเว็บไซต์
+  const LINE_ID = 'fernzajk';
   const lineUrl = 'https://line.me/ti/p/~' + encodeURIComponent(LINE_ID);
-  document.getElementById('floatLine').href = lineUrl;
-  document.getElementById('floatLine').target = '_blank';
+  const floatLine = document.getElementById('floatLine');
+  floatLine.href = lineUrl;
+  floatLine.target = '_blank';
+  floatLine.rel = 'noopener noreferrer';
   document.getElementById('year').textContent = new Date().getFullYear();
 
+  // เมื่อส่งแบบฟอร์ม จะเปิด LINE พร้อมข้อความให้ลูกค้าเลือกส่งถึงคุณนิว
   const form = document.getElementById('bookingForm');
   form.addEventListener('submit', function(e){
     e.preventDefault();
     if(!form.reportValidity()) return;
+
     const data = new FormData(form);
     const lang = document.documentElement.lang;
+
+    if(!LINE_ID){
+      alert(lang === 'th'
+        ? 'กรุณาตั้งค่า LINE ID ในไฟล์ index.html ก่อนใช้งาน หรือโทร 064-328-7389'
+        : 'Please configure the LINE ID in index.html, or call 064-328-7389.');
+      return;
+    }
+
     const message = [
       lang === 'th' ? 'คำขอจองรถ Taxi Car Service 24 Hours' : 'Taxi Car Service 24 Hours - Booking Request',
+      lang === 'th' ? 'ถึงคุณนิว' : 'To Khun New',
       (lang === 'th' ? 'ชื่อ: ' : 'Name: ') + data.get('name'),
       (lang === 'th' ? 'โทร: ' : 'Phone: ') + data.get('phone'),
       (lang === 'th' ? 'ประเภทรถ: ' : 'Vehicle: ') + data.get('car'),
       (lang === 'th' ? 'วันที่: ' : 'Date: ') + (data.get('date') || '-'),
       (lang === 'th' ? 'รายละเอียด: ' : 'Trip details: ') + data.get('route')
     ].join('\n');
-    const encoded = encodeURIComponent(message);
-    if(!LINE_ID || LINE_ID === 'https://line.me/ti/p/Ck4RRMf6KD'){
-      alert(lang === 'th' ? ' ในไฟล์ index.html ก่อนใช้งานระบบจอง หรือโทร 064-328-7389' : 'Please configure LINE_ID in index.html before using booking, or call 064-328-7389.');
-      window.open('https://line.me/', '_blank');
-      return;
+
+    const lineShareUrl = 'https://line.me/R/msg/text/?' + encodeURIComponent(message);
+    const lineWindow = window.open(lineShareUrl, '_blank');
+
+    // หากเบราว์เซอร์บล็อกหน้าต่างใหม่ ให้เปิด LINE ในแท็บเดิมแทน
+    if(!lineWindow){
+      window.location.href = lineShareUrl;
     }
-    window.open('https://line.me/R/msg/text/?' + encoded, '_blank');
   });
 
   const toggle = document.getElementById('langToggle');
